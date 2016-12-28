@@ -14,9 +14,14 @@ with open('ColCheckMe','r') as f:
 #    print 'the length of fields: \n'
 #    print len(fields)
 #    print '\n'
-line_len_check = ""
-line_len_check = Module_functions.check_line_length(line_list[0])
+
+line_len_check = Module_functions.check_line_length(line_list)
+print "The columns in the file are 7 in each line: "
 print line_len_check
+
+print "The number of SpecStr in the file: "
+check_str = "SpecStr"
+print Module_functions.check_num_string(line_list, check_str)
 #print out the reading result list
 for line in line_list:
     #print "\t".join(line)

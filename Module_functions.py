@@ -1,11 +1,20 @@
 
 
 
-def check_line_length(line):
-    if (len(line) !=7):
-        return "The number of columns is not exactly 7."
-    else:
-        return "The number of Columns is exactly 7. "
+def check_line_length(lines):
+    check_col_is_7 = True
+    line_index = 1
+    for line in lines:
+        if (len(line) != 7):
+            check_col_is_7 = False
+            print "The line with not 7 columns: "
+            print "line_index  {} : {}".format(line_index, line)
+
+        #else:
+        #    print "The line with 7 columns: "
+        #    print line
+        line_index += 1
+    return check_col_is_7
 
 def allUnique(x):
         seen = set()
@@ -21,3 +30,13 @@ def check_integers(aList):
             check_int = False
 
     return check_int
+
+#get the number of certain string in a list
+def check_num_string(list, input):
+    num_of_string =0
+    for line in list:
+        for s_str in line:
+            if (s_str == input):
+                num_of_string +=1
+
+    return num_of_string
